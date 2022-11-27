@@ -6,11 +6,20 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [data1, setData1] = useState([])
+  const [data2, setData2] = useState([])
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(res => res.json())
       .then(data => {
         setData1(data)
+        console.log(data)
+      })
+  }, [])
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/comments')
+      .then(res => res.json())
+      .then(data => {
+        setData2(data)
         console.log(data)
       })
   }, [])
