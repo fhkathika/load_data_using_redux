@@ -49,20 +49,17 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ResponsiveGrid() {
-    const [posts,users,commnets,pic]=useGetData()
-   
-        console.log('posts',posts);
-        console.log('users',users);
-        console.log('commnets',commnets);
+  
+        // console.log('users',users);
+        // console.log('commnets',commnets);
   return (
-    
-         <Box sx={{ flexGrow: 1,m: 2 }}>
+    <Box sx={{ flexGrow: 1,m: 2 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {posts?.map((posts) => (
-              <Grid item xs={2} sm={4} md={4} key={posts.userId}>
-                <SingleBlog posts={posts}/>
+          
+              <Grid item xs={2} sm={4} md={4}>
+                <SingleBlog />
               </Grid>
-            ))}
+         
           </Grid>
         </Box>
           

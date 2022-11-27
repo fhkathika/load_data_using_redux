@@ -26,9 +26,8 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function SingleBlog({posts}) {
+export default function SingleBlog() {
   const [expanded, setExpanded] = React.useState(false);
-// const {userId,title,body}=props.ps
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -46,23 +45,21 @@ export default function SingleBlog({posts}) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={posts.title}
-        subheader="September 14, 2016"
+        title='kk'
+       
       />
-      <CardMedia
+      {/* <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
-      />
+        image={posts?.url}
+        alt="Paella di"
+      /> */}
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+        jojko
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
@@ -77,7 +74,7 @@ export default function SingleBlog({posts}) {
         >
           <ExpandMoreIcon />
         </ExpandMore>
-      </CardActions>
+      </CardActions> */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
